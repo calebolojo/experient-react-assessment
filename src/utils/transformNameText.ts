@@ -1,14 +1,13 @@
 export const transformNameText = (name: string) => {
   let nameText = "";
   const _name = name.split(" ");
+  let title = ""; // for 'Mr.' or 'Mrs.'
 
   if (_name.length === 2) {
     nameText = `${_name[1]}, ${_name[0]}`;
   } else if (_name.length > 2) {
-    let title = ""; // for 'Mr.' or 'Mrs.'
-
     if (_name[0] === "Mr." || _name[0] === "Mrs.") {
-      title = _name.shift(); // 'Mr.', 'Mrs.' removed from the _name array and assiegned into the title variable
+      title = _name.shift() || ""; // 'Mr.', 'Mrs.' removed from the _name array and assiegned into the title variable
     }
 
     const firstName = _name[0];

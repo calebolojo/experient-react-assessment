@@ -7,7 +7,7 @@ export const ColorModeContext = createContext({
   mode: "light",
 });
 
-export const AppThemeProvider = ({ children }) => {
+export const AppThemeProvider = ({ children }: any) => {
   const [mode, setMode] = useState("light");
 
   const colorMode = useMemo(
@@ -19,8 +19,7 @@ export const AppThemeProvider = ({ children }) => {
   );
 
   const theme = useMemo(
-    () =>
-      createTheme(getDesignTokens(mode), [mode]),
+    () => createTheme(getDesignTokens(mode), [mode]),
     [mode],
   );
 

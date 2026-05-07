@@ -22,9 +22,9 @@ function App() {
       <Box
         className="app-header flex items-center"
         sx={{
-          backgroundColor: theme.palette.background.white,
+          backgroundColor: theme.palette.background?.white,
           borderBottom: "1px solid",
-          borderBottomColor: theme.palette.border.secondary,
+          borderBottomColor: theme.palette.border?.secondary,
         }}
       >
         <div className="container mx-auto flex justify-between items-center">
@@ -66,14 +66,14 @@ function App() {
             <Link
               href="https://experient.com/"
               target="_blank"
-              sx={{ color: theme.palette.brand.base }}
+              sx={{ color: theme.palette.brand?.base }}
             >
               Experient
             </Link>{" "}
             hiring assessment project. Designed & Developed by{" "}
             <Link
               href="mailto:calebolojo1@gmail.com"
-              sx={{ color: theme.palette.brand.base }}
+              sx={{ color: theme.palette.brand?.base }}
             >
               Caleb Olojo
             </Link>

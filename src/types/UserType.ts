@@ -22,7 +22,7 @@ export interface User {
   name: string;
   username: string;
   email: string;
-  address?: Partial<Address>;
+  address: Partial<Address>;
   phone: string;
   website: string;
   company?: Company;

@@ -5,7 +5,6 @@ import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import { getSearchOptions } from "../../utils/getSearchOptions";
 import Avatar from "@mui/material/Avatar";
-import { deepOrange } from "@mui/material/colors";
 import { getNameInitials } from "../../utils/transformNameText";
 import type { User } from "../../types/UserType";
 import UserCard from "../UserCard/UserCard";
@@ -17,6 +16,7 @@ function UserSearch() {
   const [selected, setSelected] = useState<User | null>(null);
   const [inputValue, setInputValue] = useState("");
   const { data, isPending, error } = useQuery({
+    // @ts-ignore
     useQuery: ["users"],
     queryFn: () =>
       fetch("https://jsonplaceholder.typicode.com/users").then((res) =>
@@ -25,6 +25,7 @@ function UserSearch() {
   });
   const { theme } = useAppTheme();
 
+  // @ts-ignore
   const users = useMemo(() => getSearchOptions(data || []), [data]);
 
   return (
@@ -74,7 +75,7 @@ function UserSearch() {
                 >
                   <Avatar
                     sx={{
-                      bgcolor: theme.palette.brand.base,
+                      bgcolor: theme.palette.brand?.base,
                       marginRight: "16px",
                     }}
                   >
@@ -90,7 +91,7 @@ function UserSearch() {
                 label=""
                 placeholder="Search by name"
                 sx={{
-                  backgroundColor: theme.palette.background.tertiary,
+                  backgroundColor: theme.palette.background?.tertiary,
                   borderRadius: "8px",
                   height: "64px",
                 }}

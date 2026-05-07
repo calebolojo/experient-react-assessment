@@ -1,5 +1,3 @@
-import React from "react";
-
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
@@ -9,12 +7,7 @@ import { useAppTheme } from "../../hooks/useAppTheme";
 type UserCardProps = Partial<User>;
 
 const UserCard = (props: UserCardProps) => {
-  const {
-    name,
-    email,
-    phone,
-    address: { street, suite, city, zipcode },
-  } = props;
+  const { name, email, phone, address } = props;
 
   const { theme } = useAppTheme();
 
@@ -42,13 +35,13 @@ const UserCard = (props: UserCardProps) => {
           variant="body2"
           sx={{ color: theme.palette.text.secondary, fontSize: 16 }}
         >
-          {street},
+          {address?.street},
           <br />
-          {suite && (suite as string)}
+          {address?.suite && (address?.suite as string)}
           <br />
-          {city}
+          {address?.city}
           <br />
-          {zipcode as string}
+          {address?.zipcode as string}
         </Typography>
       </CardContent>
     </Card>
