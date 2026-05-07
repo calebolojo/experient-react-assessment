@@ -2,7 +2,7 @@
 
 This is a UI assessment for the [Experient](https://experient.com/) Frontend Engineer role. It provides a minimal autocomplete search feature that enables users to search for people by name. The autocomplete component displays a neat options list of people in alphabetical order with the following format: **{Last Name} {...} {Suffix}, {First Name} ({Title})**
 
-- [View Live Site](http://#)
+- [View Live Site](http://https://experient-react-assessment.vercel.app/)
 
 ## Run Locally
 
