@@ -56,6 +56,12 @@ body {
   @media (max-width: 1040px) {
     margin-top: 80px;
   }
+  h3 {
+    @media (max-width: 650px) {
+      margin-top: 140px;
+      font-size: 34px;
+    }
+  }
   .user-search-wrap {
     width: 100%;
   }

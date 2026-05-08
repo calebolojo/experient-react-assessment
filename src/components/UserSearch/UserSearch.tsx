@@ -100,9 +100,7 @@ function UserSearch() {
             )}
           />
 
-      
-              <UserCard show={selected !== null} {...selected} />
-         
+          <UserCard show={selected !== null} {...selected} />
         </div>
       ) : null}
 
