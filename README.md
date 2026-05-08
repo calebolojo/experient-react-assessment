@@ -23,7 +23,7 @@ This is a UI assessment for the [Experient](https://experient.com/) Frontend Eng
    and run the foolowing command:
 
    ```bash
-   git clone https://github.com/calebolojo/experient-react-developer-assessment.git
+   git clone https://github.com/calebolojo/experient-react-assessment.git
 
    ```
 
