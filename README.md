@@ -4,6 +4,19 @@ This is a UI assessment for the [Experient](https://experient.com/) Frontend Eng
 
 - [View Live Site](http://https://experient-react-assessment.vercel.app/)
 
+## Highlights
+
+- React
+- Typescript
+- React Context
+- React Hooks
+- Material UI React library
+- Light/Dark theme
+- Mobile Responsive
+- Animation with [Motion.dev](https://motion.dev/)
+
+---
+
 ## Run Locally
 
 1. **Clone the repository** - open your Terminal(for Mac users) or Command Prompt (for Windows users),
