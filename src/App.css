@@ -1,8 +1,17 @@
 :root {
   font-family: "Inter", sans-serif;
+  --container-padding-desktop: 32px;
+  --container-padding-mobile: 16px;
+}
+body {
+  overflow-y: hidden;
+}
+#root {
 }
 
 .app {
+  height: 100vh;
+
   &--light {
   }
   &--dark {
@@ -12,6 +21,12 @@
     box-shadow:
       0px 4px 4px 0.5px rgba(31, 31, 30, 0.01),
       0px 4px 20px rgba(0, 0, 0, 0.035);
+    .container {
+      padding: var(--container-padding-desktop);
+      @media (max-width: 1040px) {
+        padding: var(--container-padding-mobile);
+      }
+    }
   }
 
   .app-main {
@@ -19,9 +34,14 @@
     .container {
       height: 100%;
       display: flex;
-      align-items: center;
       justify-content: center;
+      padding: var(--container-padding-desktop);
+      @media (max-width: 1040px) {
+        padding: var(--container-padding-mobile);
+      }
       .search-wrap {
+        width: 100%;
+        max-width: 500px;
       }
     }
   }
@@ -31,7 +51,14 @@
 }
 
 .user-search {
-  transform: translateY(-100px);
+  width: 100%;
+  margin-top: 150px;
+  @media (max-width: 1040px) {
+    margin-top: 80px;
+  }
+  .user-search-wrap {
+    width: 100%;
+  }
   #user-search-select {
     height: 31px;
     .search-text-field {
@@ -45,8 +72,11 @@
   height: 64px;
   position: relative;
   background-color: #e7e7e7;
-  /* E0E0E0 */
   border-radius: 8px;
+  @media (max-width: 1040px) {
+    width: 100% !important;
+    max-width: 100%;
+  }
   &.animate-pulse.user-search-skeleton--dark {
     background-color: #555555;
     .placeholder-skeleton {

@@ -40,7 +40,7 @@ function UserSearch() {
       {isPending ? (
         <UserSearchSkeleton />
       ) : !isPending && !error ? (
-        <>
+        <div className="user-search-wrap">
           <Autocomplete
             value={selected}
             onChange={(_: any, _selected: User | null) => {
@@ -52,7 +52,7 @@ function UserSearch() {
             }}
             id="user-search-select"
             sx={{
-              width: 500,
+              width: "100%",
               backgroundColor: theme.palette.background.tertiary,
               borderRadius: "8px",
               height: "64px",
@@ -100,12 +100,10 @@ function UserSearch() {
             )}
           />
 
-          {selected && (
-            <div className="mt-6">
-              <UserCard {...selected} />
-            </div>
-          )}
-        </>
+      
+              <UserCard show={selected !== null} {...selected} />
+         
+        </div>
       ) : null}
 
       {!isPending && error && (
