@@ -19,8 +19,7 @@ This is a UI assessment for the [Experient](https://experient.com/) Frontend Eng
 
 ## Run Locally
 
-1. **Clone the repository** - open your Terminal(for Mac users) or Command Prompt (for Windows users),
-   and run the foolowing command:
+1. **Clone the repository** - open your Terminal(for Mac users) or Command Prompt (for Windows users), and run the foolowing command:
 
    ```bash
    git clone https://github.com/calebolojo/experient-react-assessment.git
