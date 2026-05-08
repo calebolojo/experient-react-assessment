@@ -11,9 +11,9 @@ This is a UI assessment for the [Experient](https://experient.com/) Frontend Eng
 - React Context
 - React Hooks
 - Material UI React library
-- Light/Dark theme
+- MUI theme (light & dark) integration
 - Mobile Responsive
-- Animation with [Motion.dev](https://motion.dev/)
+- Animation with [motion.dev](https://motion.dev/) library
 
 ---
 
